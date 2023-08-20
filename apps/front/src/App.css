@@ -1,0 +1,168 @@
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.containerChat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: #060713;
+  width: 90%;
+  max-height: 42rem;
+  color: #000000;
+  box-shadow: 0 0 2rem #ffffff23;
+}
+
+.rome {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 2.5rem;
+  color: #00ccff00;
+  margin-top: 4rem;
+}
+
+.containerEachMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #060713;
+  width: 100%;
+  height: 40rem;
+  overflow: scroll;
+  padding: 1rem 0 3rem 0;
+}
+
+.containerEachMsg::-webkit-scrollbar {
+  width: .2rem;
+  background-color: #f0f8ff00;
+}
+
+.containerEachMsg::-webkit-scrollbar-thumb {
+  width: .4rem;
+  background-color: #3d0aca9a;
+}
+
+.backgroundMsg {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  padding-bottom: 2rem;
+}
+
+.containMsg .timeMsg{
+  display: flex;
+  flex-direction: column;
+  font-size: .6rem;
+}
+
+.containMsg .yourMsg {
+  display: inline-block;
+  background-color: #8a2be2;
+  word-wrap: break-word;
+  max-width: 50%;
+  padding: .6rem;
+  border-radius: .6rem;
+  margin: .3rem;
+}
+
+.containMsg .MyMsg {
+  background-color: #00ccff;
+  float: right;
+  word-wrap: break-word;
+  max-width: 50%;
+  padding: .6rem;
+  border-radius: .6rem;
+  margin: .3rem;
+}
+
+.containerSendMsg {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.fieldMsg {
+  background-color: #ffffff;
+  border: none;
+  border-radius: .3rem;
+  width: 85%;
+  color: #000000;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  resize: none;
+}
+
+.fieldMsg::-webkit-scrollbar {
+  width: .25rem;
+}
+
+.fieldMsg::-webkit-scrollbar-thumb {
+  background-color: #3d0acad7;
+}
+
+.buttonMsg {
+  background-color: #0000ff00;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  transition: all .1s ease-in;
+  cursor: pointer;
+}
+
+.buttonMsg:hover {
+  text-shadow: 0 0 .3rem #ffffff;
+}
+
+.containerAdvice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0000003a;
+  height: 1rem;
+}
+
+.containerAdvice p {
+  font-size: .6rem;
+  color: #ffffff;
+}
+
+.yourMsg .content {
+  margin-left: 1rem;
+}
+
+.MyMsg .content {
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+
+  .containMsg .yourMsg {
+    max-width: 100%;
+    font-size: .8rem;
+  }
+
+  .containMsg .MyMsg {
+    max-width: 100%;
+    font-size: .8rem;
+  }
+  .buttonMsg {
+    font-size: 1.5rem;
+    padding: .5rem;
+  }
+
+  .fieldMsg {
+    font-size: .8rem;
+  }
+}
