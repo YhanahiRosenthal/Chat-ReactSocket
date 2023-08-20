@@ -8,13 +8,11 @@ import { fileURLToPath } from "url";
 const port = process.env.PORT || 9000;
 const app = express();
 const server = http.createServer(app)
-const io = new SocketServer(server,
-  // {
-  //   cors: {
-  //       origin: "http://localhost:5173" // en local.
-  //   }
-  // }
-)
+const io = new SocketServer(server, {
+    cors: {
+        // origin: "http://localhost:5173" en local
+    }
+})
 
 io.on('connect', socket => {
     console.log('client online', socket.id)
@@ -23,9 +21,7 @@ io.on('connect', socket => {
         io.emit('messages', data);
     })
 })
-app.use(cors({
-  origin: "https://chat-react-socket-front.vercel.app",
-}));
+app.use(cors());
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const frontPath = join(__dirname, "..", "front", "dist");
