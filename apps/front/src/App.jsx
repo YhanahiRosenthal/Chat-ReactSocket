@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import './App.css';
 
 // const socket = io("http://localhost:9000"); // - cuando corre local.
-const socket = io();
+const socket = io("https://chat-react-socket-front.vercel.app");
 
 const App = () => {
   const [message, setMessage] = useState('');
