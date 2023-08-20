@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app)
 const io = new SocketServer(server, {
     cors: {
-        origin: "http://localhost:5173"
+        origin: "http://localhost:5173" || "https://chat-react-socket-front.vercel.app"
     }
 })
 
