@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Swal from 'sweetalert2';
 import './App.css';
 
-// const socket = io("http://localhost:9000"); cuando corre localhost.
+// const socket = io("http://localhost:9000"); cuando corre localhost
 const socket = io("https://chat-react-socket-front.vercel.app");
 
 const App = () => {
