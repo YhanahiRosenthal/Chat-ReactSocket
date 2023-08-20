@@ -8,11 +8,7 @@ import { fileURLToPath } from "url";
 const port = process.env.PORT || 9000;
 const app = express();
 const server = http.createServer(app)
-const io = new SocketServer(server, {
-    cors: {
-        origin: "http://localhost:5173" || "https://chat-react-socket-front.vercel.app"
-    }
-})
+const io = new SocketServer(server)
 
 io.on('connect', socket => {
     console.log('client online', socket.id)
