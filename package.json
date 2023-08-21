@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./apps/server/app.js",
     "dev": "turbo dev",
     "build": "turbo build"
   },
